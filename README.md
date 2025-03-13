@@ -53,5 +53,4 @@ Feel free to submit issues and pull requests to improve the platform!
 ## 📜 License
 This project is licensed under the MIT License.
 
-## 📞 Contact
-For any queries, reach out via [your email or website].
+
