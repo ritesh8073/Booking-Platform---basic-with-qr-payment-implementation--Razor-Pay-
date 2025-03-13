@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Information</title>
+</head>
+<body>
+    <h1>Booking Details</h1>
+    <p><strong>Booking ID:</strong> {{ booking['id'] }}</p>
+    <p><strong>Name:</strong> {{ booking['name'] }}</p>
+    <p><strong>Phone:</strong> {{ booking['phone'] }}</p>
+    <p><strong>Time Slot:</strong> {{ booking['time_slot'] }}</p>
+    
+    {% if not booking['confirmed'] %}
+        <form method="POST" action="{{ url_for('confirm_booking_action', booking_id=booking['id']) }}">
+            <button type="submit">Confirm Booking</button>
+        </form>
+    {% else %}
+        <p>This booking has already been confirmed.</p>
+    {% endif %}
+</body>
+</html>

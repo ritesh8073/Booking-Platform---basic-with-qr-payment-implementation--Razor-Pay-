@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #12d73d;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #8a24e3;
+            color: rgb(40, 198, 101);
+            padding: 20px;
+            text-align: center;
+            border-radius: 0%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .container p {
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        .halt {
+            margin-top: 30px;
+            text-align: center;
+            background-color: #f8312f;
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0.9;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        .halt:hover {
+            opacity: 1;
+            transform: translateY(-5px);
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="email"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 80%;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #12d73d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #00a6ed;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Hi, How Are You?</h2>
+    </header>
+
+    <div class="container">
+        <h2>About This Page</h2>
+        <p>This is a simple page with some basic CSS styling. The layout is clean and easy to read.</p>
+    </div>
+
+    <div class="halt">
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required> <br />
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </form>
+
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </div>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+
+            if (name && email) {
+                // Form is valid, submit it and alert the user
+                alert('Form submitted!\nName: ' + name + '\nEmail: ' + email);
+            } else {
+                // Form is invalid, alert the user to fill in both fields
+                alert('Please fill in both fields.');
+            }
+        }
+/******  0229e97e-5986-4df3-a534-55fbbc9ead71  *******/
+    </script>
+</body>
+</html>

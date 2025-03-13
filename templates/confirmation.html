@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Booking</title>
+</head>
+<body>
+    <h1>Confirm Your Booking</h1>
+    <p>Booking ID: {{ booking.id }}</p>
+    <p>Time Slot: {{ booking.time_slot }}</p>
+    <form method="POST" action="{{ url_for('confirm_booking_action', booking_id=booking.id) }}">
+        <button type="submit">Confirm Booking</button>
+    </form>
+</body>
+</html>
